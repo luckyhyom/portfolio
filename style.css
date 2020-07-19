@@ -24,6 +24,35 @@
   --weight-bold: 700;
   --weight-semi-bold: 600;
   --weight-regular: 400;
+  /* Size */
+  --size-border-radius: 4px;
+}
+
+/* 기본 설정 */
+
+body {
+  margin: 0;
+  cursor: default;
+}
+
+[src="./imgs/icon2.png"] {
+  width: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
 /* Typography */
@@ -56,4 +85,400 @@ p {
 
 * {
   box-sizing: border-box;
+}
+
+/* Navbar */
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-pink);
+  padding: 10px;
+}
+
+.navbar__logo {
+  font-size: var(--font-medium);
+  color: var(--color-white);
+}
+
+.navbar__menu {
+  display: flex;
+  color: var(--color-white);
+}
+
+.navbar__menu__item {
+  margin: 5px;
+  padding: 6px;
+  border-radius: var(--size-border-radius);
+  cursor: pointer;
+}
+
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
+}
+
+.navbar__menu__item:hover {
+  background-color: var(--color-dark-pink);
+}
+
+#home {
+  background: url(../YoutubePrac/img/YerinB2.jpg) top/cover no-repeat;
+  text-align: center;
+}
+
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 30px;
+  opacity: 0;
+}
+
+.home__description,
+.home__title {
+  color: var(--color-white);
+}
+
+.home__contact {
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  padding: 8px 12px;
+  margin: 24px;
+  border-radius: var(--size-border-radius);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+}
+
+.section {
+  text-align: center;
+}
+
+.contents-section {
+  max-width: 1000px;
+  padding: 30px;
+  margin: auto;
+}
+
+.about__major {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+}
+
+.major__icon {
+  font-size: 70px;
+  border-radius: 50%;
+  height: 170px;
+  width: 170px;
+  line-height: 170px;
+  border: 1px solid var(--color-blue);
+  color: var(--color-blue);
+  margin: auto;
+}
+
+.major__icon i {
+  transition: all 300ms ease-in-out;
+}
+
+.major__icon:hover i {
+  color: var(--color-pink);
+  transform: rotate(-30deg) scale(1.2);
+}
+
+.major__description,
+.major__title {
+  color: var(--color-light-grey);
+}
+
+.about__jobs {
+  display: flex;
+  flex-direction: column;
+}
+
+.job {
+  display: flex;
+  margin: 5px;
+  align-items: center;
+}
+
+.job__logo {
+  margin: 0px 12px;
+  border-radius: 50%;
+}
+.job__name,
+.job__period {
+  color: var(--color-light-grey);
+  text-align: left;
+}
+
+/* Skills */
+
+#sills {
+  background-color: var(--color-yellow);
+}
+
+.skillset {
+  display: flex;
+  background-color: var(--color-light-grey);
+  color: var(--color-white);
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+.skillset__title {
+  color: var(--color-white);
+}
+
+.skillset__left {
+  flex-basis: 60%;
+  background-color: var(--color-dark-grey);
+  padding: 0px 25px;
+}
+
+.skillset__right {
+  flex-basis: 40%;
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill__bar {
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-light-grey);
+}
+
+.skill__value {
+  background-color: var(--color-orange);
+  height: 4px;
+}
+
+.tools {
+  background-color: var(--color-grey);
+  padding: 1px;
+}
+
+/* Work */
+
+.work__categories {
+  display: flex;
+  justify-content: center;
+}
+
+.category__btn {
+  border: 1px solid var(--color-light-grey);
+  padding: 8px 24px;
+  margin: 0px 1px;
+  border-radius: 4px;
+}
+
+.category__btn.active,
+.category__btn:hover {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+}
+
+.category__count {
+  display: inline-block;
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  position: relative;
+  top: -20px;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+
+.category__btn.active .category__count,
+.category__btn:hover .category__count {
+  opacity: 1;
+  top: 0;
+}
+
+.work__projects {
+  margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project {
+  margin: 2px;
+  position: relative;
+  width: 280px;
+  height: 250px;
+}
+
+.project img {
+  max-width: 100%;
+  height: 100%;
+  background-color: var(--color-pink);
+}
+
+.project__decription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-black);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+
+.project__decription:hover {
+  opacity: 0.8;
+}
+
+.project__decription h3 {
+  color: var(--color-white);
+}
+
+/* Testimonials */
+
+#testimonials {
+  background-color: var(--color-dark-white);
+}
+
+.testimonials {
+  margin: 40px 0px;
+}
+
+.testimonual__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.testimonual__avatar:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.testimonual__avatar:nth-child(even) {
+  margin-left: 30px;
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  margin: 40px 0px;
+}
+
+.testimonial__speech-bubble {
+  background-color: var(--color-white);
+  border-radius: 4px;
+  padding: 18px;
+}
+
+.testimonial__speech-bubble p {
+  color: var(--color-light-grey);
+  text-align: center;
+}
+
+.name a {
+  color: var(--color-pink);
+  padding: 0px 5px;
+}
+
+/* Contact */
+
+#contact {
+  background-color: var(--color-pink);
+}
+
+.contact__email,
+.contact__links,
+.contact__title,
+.contact__rights {
+  color: var(--color-white);
+  margin: 20px;
+}
+
+.contact__links {
+  font-size: var(--font-medium);
+  transition: all 300ms ease-in-out;
+}
+
+.contact__links i {
+  margin: 0px 2px;
+}
+
+.contact__links i:hover {
+  color: var(--color-yellow);
+  transform: scale(1.2);
+}
+
+.navbar__toggle {
+  font-size: var(--font-medium);
+  color: var(--color-white);
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  display: none;
+}
+
+/* For below 768px screen width */
+
+@media screen and (max-width: 768px) {
+  .navbar__toggle {
+    display: block;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar__menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar__toggle:active .navbar__menu {
+    display: block;
+  }
+
+  .navbar__menu__item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .home__avatar {
+    display: none;
+  }
+
+  .home__title {
+    margin: 0;
+    opacity: 0.8;
+  }
+
+  .home__description {
+    opacity: 0.8;
+  }
+
+  .about__major {
+    flex-direction: column;
+  }
+
+  .major {
+    margin-bottom: 30px;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+
+  .project {
+  }
 }
