@@ -90,11 +90,14 @@ p {
 /* Navbar */
 
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--color-pink);
   padding: 10px;
+  background: transparent;
+  transition: all 0.35s;
 }
 
 .navbar__logo {
@@ -122,9 +125,19 @@ p {
   background-color: var(--color-dark-pink);
 }
 
+/* navbar--dark */
+
+#navbar.navbar--dark {
+  background-color: black;
+  z-index: 100;
+}
+
+/* home */
+
 #home {
-  background: url(../YoutubePrac/img/YerinB2.jpg) top/cover no-repeat;
+  background: url(./imgs/YerinB2.jpg) top/cover no-repeat;
   text-align: center;
+  padding-top: 100px;
 }
 
 .home__avatar {
