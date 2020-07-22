@@ -125,11 +125,21 @@ p {
   background-color: var(--color-dark-pink);
 }
 
-/* navbar--dark */
+/* navbar--dark 
+transform color when*/
 
 #navbar.navbar--dark {
   background-color: black;
   z-index: 100;
+}
+
+/* a에는 href로 경로가 있잖아? 근데 li에는 없잖아. 그 요소를 추가하는 방법을 모르네
+onclick을 추가하고, 거기에 경로를 추가해주면 되는거지
+일단 clicklistener를 ul에 주니까 list에 다 먹힌다. 공백에도 먹히지만
+남은 문제는 어떻게 경로를 설정하냐
+보통은 그냥 href="#아이디" 해주면 되는데
+*/
+#navbar.topage {
 }
 
 /* home */
@@ -450,6 +460,7 @@ p {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    user-select: none;
   }
   .navbar__menu {
     flex-direction: column;
