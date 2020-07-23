@@ -87,6 +87,30 @@ p {
   box-sizing: border-box;
 }
 
+/* arrow-up */
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: var(--color-pink);
+  height: 50px;
+  width: 50px;
+  color: var(--color-white);
+  border-radius: 50%;
+  font-size: var(--font-medium);
+  text-align: center;
+  /* display: none; display none에는 적용되지 않는다.*/
+  transition: all 0.35s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.arrow-up.visible {
+  /* display: block; */
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* Navbar */
 
 #navbar {
@@ -129,7 +153,7 @@ p {
 transform color when*/
 
 #navbar.navbar--dark {
-  background-color: black;
+  background-color: var(--color-pink);
   z-index: 100;
 }
 
@@ -329,6 +353,13 @@ onclick을 추가하고, 거기에 경로를 추가해주면 되는거지
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all 350ms;
+}
+
+.work__projects.anim-out {
+  opacity: 0;
+  transform: scale(0.9) translateY(40px);
 }
 
 .project {
@@ -336,6 +367,11 @@ onclick을 추가하고, 거기에 경로를 추가해주면 되는거지
   position: relative;
   width: 280px;
   height: 250px;
+  display: block;
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project img {
@@ -476,6 +512,12 @@ onclick을 추가하고, 거기에 경로를 추가해주면 되는거지
   .navbar__menu__item {
     width: 100%;
     text-align: center;
+  }
+
+  /* home */
+
+  .homes > {
+    transition: all 350ms ease-in-out;
   }
 
   .home__avatar {

@@ -52,17 +52,19 @@
 
     <!-- Home -->
     <section id="home">
-      <img
-        src="../YoutubePrac/img/Me3.png"
-        alt="Testweb logo"
-        class="home__avatar"
-      />
-      <h1 class="home__title">
-        Hello, <br />
-        I'm a special software engineer
-      </h1>
-      <h2 class="home__description">you gonna need me</h2>
-      <button class="home__contact">Contact me</button>
+      <div class="home__container">
+        <img
+          src="../YoutubePrac/img/Me3.png"
+          alt="Testweb logo"
+          class="home__avatar"
+        />
+        <h1 class="home__title">
+          Hello, <br />
+          I'm a special software engineer
+        </h1>
+        <h2 class="home__description">you gonna need me</h2>
+        <button class="home__contact">Contact me</button>
+      </div>
     </section>
 
     <!-- About -->
@@ -213,16 +215,16 @@
         <h1>My Work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
-          <button class="category__btn active">
+          <button class="category__btn active" data-filter="*">
             All <span class="category__count">8</span>
           </button>
-          <button class="category__btn">
+          <button class="category__btn" data-filter="front-end">
             Front-end <span class="category__count">3</span>
           </button>
-          <button class="category__btn">
+          <button class="category__btn" data-filter="back-end">
             Back-end <span class="category__count">3</span>
           </button>
-          <button class="category__btn">
+          <button class="category__btn" data-filter="mobile">
             Mobile <span class="category__count">2</span>
           </button>
         </div>
@@ -232,6 +234,7 @@
             href="https://www.youtube.com/watch?v=cwtw_f1fqkU"
             class="project"
             target="_blank"
+            data-type="front-end"
             ><img src="./imgs/YerinB3.jpg" alt="YerinB" />
             <div class="project__decription">
               <h3>YerinB</h3>
@@ -242,6 +245,7 @@
             href="https://www.youtube.com/watch?v=cwtw_f1fqkU"
             class="project"
             target="_blank"
+            data-type="back-end"
             ><img src="./imgs/YerinB4.jpg" alt="YerinB" />
             <div class="project__decription">
               <h3>YerinB</h3>
@@ -252,6 +256,7 @@
             href="https://www.youtube.com/watch?v=cwtw_f1fqkU"
             class="project"
             target="_blank"
+            data-type="mobile"
             ><img src="./imgs/YerinB5.jpg" alt="YerinB" />
             <div class="project__decription">
               <h3>YerinB</h3>
@@ -262,6 +267,7 @@
             href="https://www.youtube.com/watch?v=sQFSh9K5Y-s"
             class="project"
             target="_blank"
+            data-type="front-end"
             ><img src="./imgs/YerinB6.jpg" alt="YerinB" />
             <div class="project__decription">
               <h3>YerinB</h3>
@@ -272,6 +278,7 @@
             href="https://www.youtube.com/watch?v=cwtw_f1fqkU"
             class="project"
             target="_blank"
+            data-type="back-end"
             ><img src="./imgs/YerinB7.jpeg" alt="YerinB" />
             <div class="project__decription">
               <h3>YerinB</h3>
@@ -282,6 +289,7 @@
             href="https://www.youtube.com/watch?v=sQFSh9K5Y-s"
             class="project"
             target="_blank"
+            data-type="mobile"
             ><img src="./imgs/YerinB8.png" alt="YerinB" />
             <div class="project__decription">
               <h3>YerinB</h3>
@@ -292,6 +300,7 @@
             href="https://www.youtube.com/watch?v=sQFSh9K5Y-s"
             class="project"
             target="_blank"
+            data-type="front-end"
             ><img src="./imgs/YerinB9.png" alt="YerinB" />
             <div class="project__decription">
               <h3>YerinB</h3>
@@ -302,6 +311,7 @@
             href="https://www.youtube.com/watch?v=sQFSh9K5Y-s"
             class="project"
             target="_blank"
+            data-type="front-end"
             ><img src="./imgs/YerinB10.png" alt="YerinB" />
             <div class="project__decription">
               <h3>YerinB</h3>
@@ -371,5 +381,8 @@
         </p>
       </div>
     </section>
+
+    <!-- Arrow up -->
+    <button class="arrow-up"><i class="fas fa-arrow-up"></i></button>
   </body>
 </html>
