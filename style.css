@@ -134,6 +134,10 @@ p {
   color: var(--color-white);
 }
 
+.navbar__menus {
+  width: 100%;
+}
+
 .navbar__menu__item {
   margin: 5px;
   padding: 6px;
@@ -193,6 +197,10 @@ onclick을 추가하고, 거기에 경로를 추가해주면 되는거지
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
+}
+
+.home__contact:hover {
+  background-color: var(--color-orange);
 }
 
 .section {
@@ -487,6 +495,15 @@ onclick을 추가하고, 거기에 경로를 추가해주면 되는거지
 /* For below 768px screen width */
 
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
   .navbar__toggle {
     display: block;
     top: 10px;
@@ -497,6 +514,8 @@ onclick을 추가하고, 거기에 경로를 추가해주면 되는거지
     align-items: flex-start;
     user-select: none;
     justify-content: center;
+    background-color: var(--color-pink);
+    z-index: 100;
   }
 
   .navbar__menu {
@@ -504,11 +523,19 @@ onclick을 추가하고, 거기에 경로를 추가해주면 되는거지
     align-items: center;
     justify-content: center;
     width: 100%;
-    display: block;
+    display: none;
   }
 
   .navbar__menu.open {
-    display: none;
+    display: block;
+  }
+
+  .navbar__menu__item {
+    margin: auto;
+  }
+
+  .navbar__menu.open > .navbar__menu {
+    display: block;
     /* 엘리님 짱짱❤️ */
   }
 
@@ -549,5 +576,38 @@ onclick을 추가하고, 거기에 경로를 추가해주면 되는거지
   }
 
   .project {
+  }
+
+  .contents-section {
+    padding: 15px;
+    padding-top: 22px;
+  }
+
+  .arrow-up {
+    bottom: 20px;
+    right: 30px;
+  }
+  .arrow-up.visible {
+    opacity: 0.6;
+  }
+
+  .testimonial {
+    flex-direction: column;
+  }
+
+  .testimonial:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+
+  .testimonual__avatar:nth-child(odd),
+  .testimonual__avatar:nth-child(even) {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  /* .testimonual__speecg-bubble {
+      order:1} */
+
+  #navbar.navbar--dark {
   }
 }

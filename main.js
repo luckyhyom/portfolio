@@ -25,6 +25,7 @@ navbarMenu.addEventListener("click", (event) => {
     return;
   }
 
+  navbarMenu.classList.remove("open");
   scrollIntoViews(`${link}`);
 });
 
@@ -145,6 +146,5 @@ workButton.addEventListener("click", () => {
 const toggleBtn = document.querySelector(".navbar__toggle");
 toggleBtn.addEventListener("click", () => {
   const menu = document.querySelector(".navbar__menu");
-  console.log(menu.classList);
   menu.classList.toggle("open");
 });
