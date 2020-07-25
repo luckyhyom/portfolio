@@ -504,11 +504,12 @@ onclick을 추가하고, 거기에 경로를 추가해주면 되는거지
     align-items: center;
     justify-content: center;
     width: 100%;
-    display: none;
+    display: block;
   }
 
   .navbar__menu.open {
-    display: block;
+    display: none;
+    /* 엘리님 짱짱❤️ */
   }
 
   .navbar__menu__item {
