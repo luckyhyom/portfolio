@@ -76,10 +76,20 @@ arrowUp.addEventListener("click", () => {
 const workButton = document.querySelector(".work__categories");
 const projectContainer = document.querySelector(".work__projects");
 const projects = document.querySelectorAll(".project");
+
 workButton.addEventListener("click", () => {
   const filter =
     event.target.dataset.filter || event.target.parentNode.dataset.filter;
   // undefined은 false와 비슷하다.
+
+  //remove selection from thge precious item and select the new one
+
+  const target =
+    event.target.nodeName === "BUTTON" ? event.target : event.target.parentNode;
+  document
+    .querySelector(".category__btn.selected")
+    .classList.remove("selected");
+  target.classList.add("selected");
 
   projectContainer.classList.add("anim-out");
 
@@ -112,3 +122,29 @@ workButton.addEventListener("click", () => {
 
 //모든 코드는 동기적으로 처리가 된다.
 //그래서 클래스에서
+
+// 카테고리 버튼 선택효과
+// const catebtn = document.querySelector(".work__categories");
+// const catebtn2 = document.querySelectorAll(".category__btn");
+// catebtn.addEventListener("click", (e) => {
+//   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+//   console.log(filter);
+
+//   catebtn2.forEach((catebtn3) => {
+//     if (filter === catebtn3.dataset.filter) {
+//       catebtn3.classList.add("selected");
+//     } else {
+//       catebtn3.classList.remove("selected");
+//     }
+//     // console.log(catebtn3.dataset.type);
+//   });
+// });
+
+// 토글버튼
+
+const toggleBtn = document.querySelector(".navbar__toggle");
+toggleBtn.addEventListener("click", () => {
+  const menu = document.querySelector(".navbar__menu");
+  console.log(menu.classList);
+  menu.classList.toggle("open");
+});

@@ -139,13 +139,11 @@ p {
   padding: 6px;
   border-radius: var(--size-border-radius);
   cursor: pointer;
-}
-
-.navbar__menu__item.active {
-  border: 1px solid var(--color-white);
+  border: 1px solid transparent;
 }
 
 .navbar__menu__item:hover {
+  border: 1px solid var(--color-white);
   background-color: var(--color-dark-pink);
 }
 
@@ -323,7 +321,7 @@ onclick을 추가하고, 거기에 경로를 추가해주면 되는거지
   border-radius: 4px;
 }
 
-.category__btn.active,
+.category__btn.selected,
 .category__btn:hover {
   background-color: var(--color-pink);
   color: var(--color-white);
@@ -342,7 +340,7 @@ onclick을 추가하고, 거기에 경로를 추가해주면 되는거지
   transition: all 300ms ease-in-out;
 }
 
-.category__btn.active .category__count,
+.category__btn.selected .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
   top: 0;
@@ -359,7 +357,7 @@ onclick을 추가하고, 거기에 경로를 추가해주면 되는거지
 
 .work__projects.anim-out {
   opacity: 0;
-  transform: scale(0.9) translateY(40px);
+  transform: scale(0.96) translateY(40px);
 }
 
 .project {
@@ -491,21 +489,25 @@ onclick을 추가하고, 거기에 경로를 추가해주면 되는거지
 @media screen and (max-width: 768px) {
   .navbar__toggle {
     display: block;
+    top: 10px;
   }
 
   #navbar {
     flex-direction: column;
     align-items: flex-start;
     user-select: none;
+    justify-content: center;
   }
+
   .navbar__menu {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
+    display: none;
   }
 
-  .navbar__toggle:active .navbar__menu {
+  .navbar__menu.open {
     display: block;
   }
 
