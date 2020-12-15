@@ -1,6 +1,6 @@
-# portfolio
+# Portfolio
 
-hyomin's portfolio
+Hyomin's Portfolio
 
 unfinished Project
 https://luckyhyom.github.io/portfolio1/
