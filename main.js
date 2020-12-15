@@ -48,9 +48,10 @@ function change() {
 // children[0]~[3], 펼치면 상세보기됨 (새로운 구성요소가 보이는게 아님)
 
 const home = document.querySelector(".home__container");
-const homeHeight = home.getBoundingClientRect().height;
+const home2 = document.querySelector("#home");
+const home2Height = home2.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
-  home.style.opacity = 1 - scrollY / homeHeight;
+  home.style.opacity = 1 - scrollY / home2Height;
 });
 
 // const aboutMe = document.querySelector("#about>.contents-section");
@@ -63,7 +64,7 @@ document.addEventListener("scroll", () => {
 // show arrow-up
 const arrowUp = document.querySelector(".arrow-up");
 document.addEventListener("scroll", () => {
-  if (window.scrollY > homeHeight / 2) {
+  if (window.scrollY > home2Height / 2) {
     arrowUp.classList.add("visible");
   } else {
     arrowUp.classList.remove("visible");
@@ -87,6 +88,11 @@ workButton.addEventListener("click", () => {
 
   const target =
     event.target.nodeName === "BUTTON" ? event.target : event.target.parentNode;
+
+  if (event.target.nodeName !== "BUTTON") {
+    return;
+  }
+
   document
     .querySelector(".category__btn.selected")
     .classList.remove("selected");
