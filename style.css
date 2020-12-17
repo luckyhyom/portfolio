@@ -171,7 +171,7 @@ onclick을 추가하고, 거기에 경로를 추가해주면 되는거지
 /* home */
 
 #home {
-  background: url(./imgs/YerinB2.jpg) top/cover no-repeat;
+  background: url(./imgs/redflower.jpeg) top/cover no-repeat;
   text-align: center;
   padding-top: 100px;
   /* padding-bottom: 100px; */
@@ -182,11 +182,11 @@ onclick을 추가하고, 거기에 경로를 추가해주면 되는거지
 }
 
 .home__avatar {
-  width: 250px;
-  height: 250px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   margin: 30px;
-  opacity: 0;
+  opacity: 1;
 }
 
 .home__description,
@@ -263,6 +263,7 @@ onclick을 추가하고, 거기에 경로를 추가해주면 되는거지
 .job__logo {
   margin: 0px 12px;
   border-radius: 50%;
+  width: 50px;
 }
 .job__name,
 .job__period {
