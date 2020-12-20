@@ -1,5 +1,12 @@
 "use strict";
 
+  
+setTimeout(() => {
+  alert(`이것은 자기소개용 포트폴리오입니다.
+꼭 아래의 work에서 개인 프로젝트를 선택해서 확인해주세요!`);
+}, 1000);
+
+
 //Make navbar transparent when it is on the top
 const navbar = document.querySelector("#navbar");
 const navbarheight = navbar.getBoundingClientRect().height;
@@ -9,6 +16,9 @@ document.addEventListener("scroll", () => {
   } else {
     navbar.classList.remove("navbar--dark");
   }
+
+
+  console.log(scrollY)
 
   // document.querySelector(".homes").style.opacity = 1 - scrollY * 0.004;
   // document.querySelector(".arrow-up").style.opacity = 0 + scrollY * 0.004;
@@ -154,3 +164,4 @@ toggleBtn.addEventListener("click", () => {
   const menu = document.querySelector(".navbar__menu");
   menu.classList.toggle("open");
 });
+
